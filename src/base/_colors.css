@@ -1,0 +1,41 @@
+/* =======================
+   Awcss Colors
+   ======================= */
+
+/* -----------------------
+   Root Variables
+   ----------------------- */
+:root {
+  /* Primary / Secondary */
+  --primary-color: #3878c3;      /* Main accent color */
+  --secondary-color: #ff5722;    /* Secondary accent */
+
+  /* Neutral / Text */
+  --text-color: #0d0c0c;            /* Main text */
+  --text-muted: #666;            /* Muted text */
+  --bg-color: #fefefe;
+  --bg-muted: #666;           /* Default background */
+  --border-color: #ddd;          /* Default border */
+
+  /* Status / Semantic Colors */
+  --success-color: #28a745;      /* Success / positive */
+  --warning-color: #ffc107;      /* Warning / caution */
+  --danger-color: #dc3545;       /* Error / danger */
+  --info-color: #17a2b8;         /* Info / neutral message */
+
+  /* Accent / Highlights */
+  --highlight-color: #184476;    /* For special attention */
+  --highlight-alt: #3878c3;      /* Alternate accent */
+}
+
+/* -----------------------
+   Background Utilities
+   ----------------------- */
+.bg-primary { background-color: var(--primary-color);}
+.bg-secondary { background-color: var(--secondary-color);}
+.bg-success { background-color: var(--success-color); }
+.bg-warning { background-color: var(--warning-color);}
+.bg-danger { background-color: var(--danger-color); }
+.bg-info { background-color: var(--info-color);}
+.bg-muted { background-color: var(--bg-muted, #f6f6f6); }
+.bg-highlight { background-color: var(--highlight-color); }

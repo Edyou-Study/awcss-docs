@@ -1,0 +1,112 @@
+@import "../base/_colors.css";
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-color, #ffffff);
+}
+
+.button {
+  padding: 0.5rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.1s ease;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.button.awcss-button {
+  border-radius: 15px;
+  border: solid 2px var(--success-color, #0077ff);
+  color: var(--text-color-white, white);
+}
+.button.primary-button {
+  background-color: var(--primary-color, #0077ff);
+  color: var(--text-color-white, white);
+  border-radius: 12px;
+}
+.button.dangerous-button {
+  background-color: var(--danger-color, #dc3545);
+  color: var(--text-color-white, white);
+  border-radius: 12px;
+  &:hover {
+    box-shadow: 0px 0px 20px rgb(207, 18, 18);
+  }
+}
+.button.warning-button {
+  background-color: var(--warning-color, #ffc107);
+  color: var(--text-color-white, white);
+  border-radius: 12px;
+  &:hover {
+    box-shadow: 0px 0px 20px rgb(193, 181, 6);
+  }
+}
+
+.disable-box-shadow.button:hover{
+  box-shadow: none !important;
+}
+
+.cart-button {
+  padding: 0.5rem 1.4rem;
+  padding-right: 2.5rem;
+  border-radius: 8px 15px;
+  /* border: solid 2px#0ba053; */
+  font-size: 1rem;
+  font-weight: 600;
+  width: fit-content;
+  background: var(--success-color, #0077ff);
+  transition: all 0.2s ease;
+  color: var(--text-color-white, white);
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    transform: translateY(-4px);
+    border-radius: 15px 10px 15px 10px;
+  }
+  &:active {
+    transform: translateY(2px);
+    background-color: #0077ff;
+  }
+   &:focus {
+    background-color: #0077ff;
+  }
+  &::after {
+    content: "🛒";
+    position: absolute;
+    right: 100%;
+    transition: all 0.3s ease-out;
+  }
+  &:hover::after {
+    /* content: "✔️"; */
+    right: 5%;
+  }
+  &:focus::after {
+    content: "✔️";
+    right: 5%;
+  }
+}
+.bd-rd-0 {
+  border-radius: none !important;
+}
+.bd-rd-5 {
+  border-radius: 5px !important;
+}
+.bd-rd-10 {
+  border-radius: 10px !important;
+}
+.bd-rd-12 {
+  border-radius: 12px !important;
+}
+.bd-rd-15 {
+  border-radius: 15px !important;
+}
+.bd-rd-50 {
+  border-radius: 50% !important;
+}
