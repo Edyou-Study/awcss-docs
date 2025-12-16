@@ -40,7 +40,7 @@ Build fast, clean interfaces with simple utility classes and zero JavaScript.
 
 #### Html Use
 ```html
-<link rel="stylesheet" href="https://mrawab.github.io/awcss/awcss.css">
+<link rel="stylesheet" href="https://mrawab.github.io/awcss/awcss/awcss.css">
 ```
 
 ---
