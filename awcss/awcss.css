@@ -1,4 +1,8 @@
 /* =======================
+ Awcss v0.0.03
+ ======================= */
+
+/* =======================
  Awcss Base Styles
  ======================= */
 /* Reset & Box sizing */
@@ -23,28 +27,18 @@
 
 :root {
   --primary-color: #3878c3;
-
   --secondary-color: #ff5722;
-
   --text-color: #0d0c0c;
   --text-color-white: rgb(246, 246, 246);
   --text-muted: #666;
-
   --bg-color: #fefefe;
   --bg-muted: #666;
-
   --border-color: #ddd;
-
   --success-color: #28a745;
-
   --warning-color: #ffc107;
-
   --danger-color: #dc3545;
-
   --info-color: #17a2b8;
-
   --highlight-color: #184476;
-
   --highlight-alt: #3878c3;
 }
 /* Body */
@@ -82,17 +76,17 @@ table {
 .heading-large {
   font-size: 2.5rem;
   font-weight: bold;
-  color: var(--text-color,#111);
+  color: var(--text-color, #111);
 }
 .heading-medium {
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--text-color,#111);
+  color: var(--text-color, #111);
 }
 .heading-small {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-color,#111);
+  color: var(--text-color, #111);
 }
 .body-text {
   font-size: 1rem;
@@ -452,4 +446,476 @@ button {
 }
 .radius-25-15 {
   border-radius: 25px 15px !important;
+}
+
+/* =========================
+   AWCSS FORMS
+========================= */
+
+/* =========================
+   SHARED
+========================= */
+body.center-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 0.3em;
+  transition: all 0.2s linear;
+}
+
+.input-container:has(input:user-invalid) i {
+  color: rgba(159, 13, 13, 0.6);
+}
+
+.input-container:has(input:user-valid) i {
+  color: rgb(6, 163, 19);
+}
+
+.input-container.validate:has(input:user-invalid) .alert-text {
+  display: block;
+}
+
+input:user-invalid {
+  border: 2px solid rgba(159, 13, 13, 0.6);
+}
+
+/* =========================
+   LOGIN FORM
+========================= */
+.login-form-basic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  gap: 2.6rem;
+  padding: 1.5em;
+  border: 1px solid #777575;
+  border-radius: 12px;
+  background-color: white;
+  position: relative;
+  font-size: 1.4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-form-basic .container-info {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-form-basic h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.login-form-basic label {
+  font-size: 1.1em;
+}
+
+.login-form-basic input {
+  font-size: 1rem;
+  padding: 0.6em 2.4em 0.6em 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form-basic i {
+  position: absolute;
+  right: 1.4em;
+  color: #888;
+  pointer-events: none;
+}
+
+.login-form-basic .alert-text {
+  display: none;
+  font-size: 0.85em;
+  top: 100%;
+  left: 39%;
+  color: rgba(159, 13, 13, 0.6);
+  position: absolute;
+}
+
+.login-form-basic .input-container.validate:has(input:user-invalid) {
+  margin-bottom: 1em;
+}
+
+.login-form-basic input[type="submit"] {
+  padding: 0.6em;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  width: 100%;
+  border: none;
+  background: #797979;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-form-basic input[type="submit"]:hover {
+  background-color: #bdbdbd;
+}
+
+.login-form-basic input[type="submit"]:active {
+  background-color: #bdbdbd;
+  transform: translateY(5px);
+}
+
+.login-form-basic .text-helper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.login-form-basic .text-helper a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ===== Login Media Queries (UNCHANGED) ===== */
+@media (max-width: 480px) {
+  body {
+    overflow: hidden;
+  }
+
+  .login-form-basic {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .login-form-basic h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-form-basic label {
+    font-size: 0.7em;
+  }
+
+  .login-form-basic input {
+    font-size: 0.7rem;
+  }
+
+  .login-form-basic i {
+    right: 0.9rem;
+    font-size: 1.1rem;
+  }
+
+  .login-form-basic input[type="submit"] {
+    font-size: 1rem;
+  }
+
+  .login-form-basic .alert-text {
+    font-size: 0.75em;
+    left: 30%;
+  }
+
+  .login-form-basic .text-helper {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .login-form-basic {
+    max-width: 420px;
+  }
+
+  .login-form-basic h2 {
+    font-size: 2rem;
+  }
+
+  .login-form-basic label {
+    font-size: 0.95em;
+  }
+
+  .login-form-basic input {
+    font-size: 0.9rem;
+  }
+
+  .login-form-basic i {
+    right: 1.2rem;
+  }
+
+  .login-form-basic .alert-text {
+    font-size: 0.85em;
+    left: 30%;
+  }
+
+  .login-form-basic .text-helper {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-form-basic {
+    max-width: 480px;
+  }
+
+  .login-form-basic h2 {
+    font-size: 2.4rem;
+  }
+
+  .login-form-basic label {
+    font-size: 1.05em;
+  }
+
+  .login-form-basic input {
+    font-size: 1rem;
+  }
+
+  .login-form-basic i {
+    right: 1.5rem;
+  }
+
+  .login-form-basic input[type="submit"] {
+    font-size: 1.2rem;
+  }
+
+  .login-form-basic .alert-text {
+    font-size: 0.95em;
+    left: 36%;
+  }
+
+  .login-form-basic .text-helper {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================
+   SIGNUP FORM
+========================= */
+.signup-form-basic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  gap: 2rem;
+  padding: 1.5em;
+  border: 1px solid #777575;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form-basic .container-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.signup-form-basic h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.signup-form-basic label {
+  font-size: 1.1em;
+}
+
+.signup-form-basic input {
+  font-size: 1rem;
+  padding: 0.6em 2.4em 0.6em 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.signup-form-basic i {
+  position: absolute;
+  top: 50%;
+  left: 14em;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.signup-form-basic .alert-text {
+  opacity: 0.5;
+  user-select: none;
+  font-size: 0.85em;
+  top: 50%;
+  transform: translate(-1000%);
+  color: #8a1a1a;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.signup-form-basic
+  .input-container.validate:has(input:user-invalid)
+  .alert-text {
+  transform: translate(0%);
+  transition: all 0.5s ease;
+}
+
+.signup-form-basic input[type="submit"] {
+  padding: 0.6em;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  width: 100%;
+  border: none;
+  background: #797979;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.signup-form-basic input[type="submit"]:hover {
+  background-color: #bdbdbd;
+}
+
+.signup-form-basic input[type="submit"]:active {
+  background-color: #bdbdbd;
+  transform: translateY(5px);
+}
+
+.signup-form-basic .text-helper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-form-basic .text-helper a {
+  color: black;
+  text-decoration: none;
+}
+
+.signup-form-basic .text-helper span {
+  text-decoration: underline;
+}
+
+/* ===== Signup Media Queries (UNCHANGED) ===== */
+@media (max-width: 480px) {
+  .signup-form-basic {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .signup-form-basic h2 {
+    font-size: 1.8rem;
+  }
+
+  .signup-form-basic label {
+    font-size: 0.8em;
+  }
+
+  .signup-form-basic input {
+    font-size: 0.8rem;
+  }
+
+  .signup-form-basic i {
+    top: 48%;
+    left: 15.2rem;
+    font-size: 1.2rem;
+  }
+
+  .signup-form-basic input[type="submit"] {
+    font-size: 1rem;
+  }
+
+  .signup-form-basic .alert-text {
+    font-size: 0.75em;
+    left: 30%;
+  }
+
+  .signup-form-basic .text-helper {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .signup-form-basic {
+    max-width: 420px;
+  }
+
+  .signup-form-basic h2 {
+    font-size: 2rem;
+  }
+
+  .signup-form-basic label {
+    font-size: 0.95em;
+  }
+
+  .signup-form-basic input {
+    font-size: 0.9rem;
+  }
+
+  .signup-form-basic i {
+    right: 1.2rem;
+  }
+
+  .signup-form-basic .alert-text {
+    font-size: 0.85em;
+    left: 30%;
+  }
+
+  .signup-form-basic .text-helper {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 631px) {
+  .signup-form-basic {
+    max-width: 400px;
+    max-height: 550px;
+    gap: 0;
+  }
+
+  .signup-form-basic h2 {
+    font-size: 1.9rem;
+  }
+
+  .signup-form-basic label {
+    font-size: 0.8em;
+  }
+
+  .signup-form-basic input {
+    font-size: 0.8rem;
+  }
+
+  .signup-form-basic i {
+    left: 15.5em;
+    font-size: 1.2rem;
+  }
+
+  .signup-form-basic input[type="submit"] {
+    font-size: 0.9rem;
+  }
+
+  .signup-form-basic .text-helper {
+    font-size: 0.9rem;
+  }
+}
+
+@media (width <= 704px), (orientation: landscape) {
+  .signup-form-basic {
+    height: 600px;
+    gap: 0.8em;
+  }
+}
+
+@media (width >= 768px), (orientation: landscape) {
+  .signup-form-basic {
+    height: 650px;
+    gap: 0.8em;
+  }
 }
