@@ -393,7 +393,7 @@ You can also use in body tag to center the form to view:
           <p class="alert-text">invalid password</p>
         </div>
 
-       <!-- Password input example -->
+       <!-- Password Confirm input example -->
       </div>
       <div class="input-container validate">
         <div class="container-info">
@@ -423,7 +423,7 @@ You can also use in body tag to center the form to view:
 ```
 
 additional info :
-- you cdd vaildation for input by using validate :
+- you add vaildation for input by using validate :
 ``` html
  <div class="input-container validate">
 ```
@@ -439,7 +439,7 @@ additional info :
 .login-form-basic
 .signup-form-basic
 .input-container.validate
-.alret-text
+.alert-text
 .text-helper
 ```
 
