@@ -3,7 +3,7 @@
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/mrawab/awcss?style=social)](https://github.com/mrawab/awcss/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/mrawab/awcss?style=social)](https://github.com/mrawab/awcss-docs/stargazers)
 
 ### A lightweight, modern CSS utility framework  
 **Clean • Minimal • Customizable**
@@ -13,7 +13,7 @@ Build fast, clean interfaces with simple utility classes and zero JavaScript.
 [Getting Started](#-getting-started) •
 [Utilities](#-utilities) •
 [Buttons](#-buttons) •
-[Forms](#-forms) •
+[Forms](#forms) •
 [Typography](#-typography)
 
 </div>
